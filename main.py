@@ -15,7 +15,7 @@ class PaginationHelper:
     
     # returns the number of pages
     def page_count(self):
-        pass
+        return abs(math.ceil(len(self.collection) / self.items_per_page))
     
     # returns the number of items on the given page. page_index is zero based
     # this method should return -1 for page_index values that are out of range
