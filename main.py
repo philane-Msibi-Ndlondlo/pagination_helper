@@ -6,11 +6,12 @@ class PaginationHelper:
     # The constructor takes in an array of items and an integer indicating
     # how many items fit within a single page
     def __init__(self, collection, items_per_page):
-        pass
+        self.collection = collection
+        self.items_per_page = items_per_page
     
     # returns the number of items within the entire collection
     def item_count(self):
-        pass
+        return len(self.collection)
     
     # returns the number of pages
     def page_count(self):
@@ -28,3 +29,7 @@ class PaginationHelper:
     
 
 helper = PaginationHelper(['a','b','c','d','e','f'], 4)
+
+#print(f"Page count is: {helper.page_count()}")
+print(f"Item count is: {helper.item_count()}")
+#print(f"Page item count is: {helper.page_item_count(2)}")
