@@ -26,10 +26,7 @@ class PaginationHelper:
     # determines what page an item at the given index is on. Zero based indexes.
     # this method should return -1 for item_index values that are out of range
     def page_index(self, item_index):
-        return -1 if (item_index < 0 or item_index > len(self.collection)) else math.floor(item_index / self.items_per_page)
-        
-        
-        
+        return -1 if (item_index < 0 or item_index > len(self.collection)) else math.floor(item_index / self.items_per_page) 
         
 helper = PaginationHelper(['a','b','c','d','e','f'], 4)
 
